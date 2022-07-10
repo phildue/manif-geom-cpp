@@ -94,7 +94,8 @@ BOOST_AUTO_TEST_CASE(TestChartMaps)
 
 BOOST_AUTO_TEST_CASE(TestConstructors)
 {
-    Vector7d x_vec(1., 1., 0., 1., 0., 0., 0.);
+    Vector7d x_vec;
+    x_vec << 1., 1., 0., 1., 0., 0., 0.;
     SE3d x(x_vec);
     BOOST_CHECK_CLOSE(x.t().x(), 1., 1e-8);
     BOOST_CHECK_CLOSE(x.t().y(), 1., 1e-8);
